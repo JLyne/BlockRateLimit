@@ -1,0 +1,20 @@
+name: BlockRateLimit
+version: @project.version@
+author: Jim (NotKatuen)
+description: Limits how frequently players can place and remove blocks
+
+main: uk.co.notnull.BlockRateLimit.BlockRateLimit
+api-version: "1.13"
+
+permissions:
+   blockratelimit.*:
+     description: Gives access to all blockratelimit commands and bypasses the rate limit
+     children:
+       blockratelimit.admin: true
+       blockratelimit.bypass: true
+   blockratelimit.admin:
+    description: Gives access to all blockratelimit commands
+    default: op
+   blockratelimit.bypass:
+    description: Bypasses the rate limit
+    default: op
